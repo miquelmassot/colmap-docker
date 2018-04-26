@@ -35,9 +35,6 @@ RUN mkdir -p /src/colmap/build
 WORKDIR /src/colmap/build
 RUN cmake -DCMAKE_BUILD_TYPE=Release -DTESTS_ENABLED=OFF .. && make && make install && make clean
 
-# Delete GUI executable
-RUN rm /usr/local/bin/colmap
-
 # Remove unnecessary packages
 RUN apt-get purge -y cmake && apt-get autoremove -y
 
