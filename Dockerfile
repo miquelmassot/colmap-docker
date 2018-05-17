@@ -15,6 +15,8 @@ RUN apt-get update && apt-get install -y \
     libxi-dev \
     libatlas-base-dev \
     libsuitesparse-dev \
+    git \
+    wget\
   && rm -rf /var/lib/apt/lists/*
 
 # Download and prepare sources to compile
