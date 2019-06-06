@@ -1,4 +1,4 @@
-FROM nvidia/cuda 
+FROM nvidia/cuda:9.0-base
 
 RUN apt-get update && apt-get install -y \
     cmake \
